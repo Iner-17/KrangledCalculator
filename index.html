@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krangled Calculator</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <main class="container">
+        <div class="calculator-container">
+            <h1>Calculator</h1>
+            <input type="text" placeholder="0" id="input-field">
+            <div class="range">
+                <input type="range" min="0" max="9" value="0" oninput="rangeValue.innerText = this.value">
+                <p id="rangeValue">0</p>
+                <button class="enter" onclick="enterNumber()">Enter</button>
+                <button class="clear" onclick="clearOne()">C</button>
+                <button class="clearall" onclick="clearAll()">CA</button>
+            </div>
+            <div class="operations">
+                <button class="add" onclick="operation('+')">+</button>
+                <button class="subtract" onclick="operation('-')">-</button>
+                <button class="multiply" onclick="operation('*')">*</button>
+                <button class="divide" onclick="operation('/')">/</button>
+                <button class="equals" onclick="equal()">=</button>
+            </div>
+        </div>
+    </main>
+    
+
+    <div class="captcha">
+        <h2>Security Check!</h2>
+        <p>Answer the following question</p>
+        <hr>
+        <br>
+        <p>To confirm that you are not a Robot please solve this equation.</p>
+        <p id="equation"></p>
+        <div class="question-field">
+            
+            <p>=</p>
+            <input type="text" id="answer" placeholder="0" value="2">
+            <button onclick="submitCaptcha()">Submit</button>
+        </div>
+        <span class="try-again">Try Again :(</span>
+    </div>
+
+    </div>  
+    <script src="js/app.js"></script>
+
+</body>
+</html>
