@@ -135,6 +135,10 @@ button {
     border-radius: 4px;
 }
 
+.premium {
+    color: rgb(151, 167, 4);
+}
+
 .try-again {
     display: none;
     color: red;
